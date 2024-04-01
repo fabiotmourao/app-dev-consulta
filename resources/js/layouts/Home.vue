@@ -3,7 +3,9 @@
     <div class="w-96 max-h-full bg-purple-700 text-white" v-show="showSide">
       <div class="h-[50px] bg-purple-700  flex justify-start  items-center ">
         <div class="px-[20px]">
-          <h3 class="font-bold text-xl">Dashboard</h3>
+            <router-link :to="{ path: '/'}" class="inline-flex relative items-center py-[10px] px-[10px] w-full text-sm font-medium rounded-md transition duration-400 ease-in-out">
+                <h3 class="font-bold text-xl">Dashboard</h3>
+            </router-link>
         </div>
       </div>
       <div class="h-[calc(100vh-50px)] bg-purple-700 py-[20px]">

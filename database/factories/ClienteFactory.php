@@ -27,12 +27,12 @@ class ClienteFactory extends Factory
             'EIRELI'
         ];
 
-        $razaoSocial = $this->faker->company . ' ' . $tipos[rand(0, count($tipos) - 1)];
+        $razaoSocial = rtrim($this->faker->company, ',') . ' ' . $tipos[rand(0, count($tipos) - 1)];
 
         return [
-            'nome' => explode(' ', $razaoSocial)[0], 
+            'nome' => explode(' ', $razaoSocial)[0],
             'razao_social' => $razaoSocial,
-            'cnpj' => $this->faker->unique()->randomNumber(8) . $this->faker->unique()->randomNumber(6),
+            'cnpj' => str_pad(mt_rand(0, 999999999), 14, '0', STR_PAD_LEFT),
         ];
     }
 }

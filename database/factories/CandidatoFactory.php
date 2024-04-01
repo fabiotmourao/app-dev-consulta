@@ -22,7 +22,7 @@ class CandidatoFactory extends Factory
     {
         return [
             'nome' => $this->faker->name,
-            'cpf' => $this->faker->unique()->randomNumber(8).$this->faker->unique()->randomNumber(3),
+            'cpf' => str_pad(mt_rand(0, 999999999), 11, '0', STR_PAD_LEFT),
             'logradouro' => $this->faker->address,
         ];
     }
