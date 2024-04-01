@@ -23,7 +23,7 @@
                 <td class="px-3 py-1">{{ formatarCNPJ(cliente.cnpj) }}</td>
                 <td class="px-3 py-1">
                     <div class="flex justify-left gap-4">
-                        <router-link :to="{  path: '/cliente/' + cliente.id + '/edit'}"
+                        <router-link :to="{  path: '/cliente/'+cliente.id+'/edit'}"
                             class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex items-center justify-center">
                             <IconEditar/>
                         </router-link>

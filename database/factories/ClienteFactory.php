@@ -20,9 +20,19 @@ class ClienteFactory extends Factory
      */
     public function definition(): array
     {
+        $tipos = [
+            'Ltda',
+            'S.A.',
+            'MEI',
+            'EIRELI'
+        ];
+
+        $razaoSocial = $this->faker->company . ' ' . $tipos[rand(0, count($tipos) - 1)];
+
         return [
-            'razao_social' => $this->faker->company,
-            'cnpj' => $this->faker->unique()->randomNumber(8).$this->faker->unique()->randomNumber(6),
+            'nome' => explode(' ', $razaoSocial)[0], 
+            'razao_social' => $razaoSocial,
+            'cnpj' => $this->faker->unique()->randomNumber(8) . $this->faker->unique()->randomNumber(6),
         ];
     }
 }

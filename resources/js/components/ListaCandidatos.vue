@@ -32,9 +32,10 @@
           </td>
           <td class="px-3 py-1">
             <div class="flex justify-left gap-4">
-              <button @click="abrirEditarCandidato(cliente)" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex items-center justify-center" >
-                <IconEditar />
-              </button>
+                <router-link :to="{  path: '/candidato/'+candidato.id+'/edit'}"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex items-center justify-center">
+                    <IconEditar/>
+                </router-link>
             </div>
           </td>
         </tr>
@@ -47,33 +48,38 @@
 import IconEditar from './icons/IconEditar.vue'
 
 export default {
+  name: "ListarCandidatos",
+
   components: {
     IconEditar,
   },
 
   data() {
     return {
-      candidatos: {},
+      candidatos: [],
     };
   },
 
   mounted() {
-    axios
-      .get("/api/candidatos")
-      .then((response) => {
-        console.log(response);
-
-        this.candidatos = response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    this.getCandidatos();
   },
 
   methods: {
+    getCandidatos() {
+      axios
+        .get("/api/candidatos")
+        .then((response) => {
+            console.log(response);
+            this.candidatos = response.data.candidatos;
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    },
+
     formatarCPF(cpf) {
-    return cpf.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, "$1.$2.$3-$4");
-    }
+        return cpf.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, "$1.$2.$3-$4");
+    },
   },
 };
 </script>

@@ -6,10 +6,11 @@
       <thead class="bg-gray-50">
         <tr>
           <th scope="col" class="px-3 py-4 font-medium text-gray-900">Nome seleção</th>
-          <th scope="col" class="px-3 py-4 font-medium text-gray-900">Cliente Razão Social</th>
+          <th scope="col" class="px-3 py-4 font-medium text-gray-900">Cliente Nome</th>
+           <th scope="col" class="px-3 py-4 font-medium text-gray-900">Cliente Razão Social</th>
           <th scope="col" class="px-3 py-4 font-medium text-gray-900">Nome Candidato</th>
           <th scope="col" class="px-3 py-4 font-medium text-gray-900">CPF</th>
-          <th scope="col" class="px-3 py-4 font-medium text-gray-900">Data Seleção</th>
+          <th scope="col" class="px-3 py-4 font-medium text-gray-900">Data Ocorrido</th>
         </tr>
       </thead>
         <tbody class="divide-y divide-gray-100 border-t border-gray-100">
@@ -21,6 +22,7 @@
                 </td>
               </div>
             </th>
+            <td class="px-3 py-2">{{ selecao.cliente.nome }}</td>
             <td class="px-3 py-2">{{ selecao.cliente.razao_social }}</td>
             <td class="px-3 py-2">{{ selecao.candidato.nome }}</td>
             <td class="px-3 py-2">{{ selecao.candidato.cpf }}</td>
@@ -37,22 +39,26 @@
 export default {
   data() {
     return {
-      selecoes: {},
+      selecoes: [],
     };
   },
 
   mounted() {
-    axios
-      .get("/api/selecao")
-      .then((response) => {
-        this.selecoes = response.data;
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    this.getSelecao();
   },
 
   methods: {
+    getSelecao(){
+        axios
+        .get("/api/selecao")
+        .then((response) => {
+            this.selecoes = response.data;
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    },
+
     formatarData(data) {
       const d = new Date(data);
       const meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];

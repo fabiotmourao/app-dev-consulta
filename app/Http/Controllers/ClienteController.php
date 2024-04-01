@@ -47,9 +47,20 @@ class ClienteController extends Controller
     public function update(Request $request, int $id)
     {
 
-        $validator = Validator::make($request->all(),  [
+        $cnpj = preg_replace('/[^0-9]/', '', $request->cnpj);
+
+        $validator = Validator::make($request->all(),
+        [
             'razao_social' => 'required|max:255',
-            'cnpj' => 'required|digits:14',
+            'cnpj' => 'required|max:14|min:14',
+
+        ],[
+            'razao_social.required' => '*O campo razão social é obrigatório.',
+            'razao_social.max' => '*O campo razao social dever conter maximo 255 caracteres.',
+            'cnpj.required' => '*O campo cnpj é obrigatório.',
+            'cnpj.max' => '*O campo cnpj deve ter conter 14 caracteres.',
+            'cnpj.min' => '*O campo cnpj deve ter no mínimo 14 caracteres.',
+
         ]);
 
         if($validator->fails()) {
@@ -63,7 +74,7 @@ class ClienteController extends Controller
             if($cliente){
                 $cliente->update([
                   'razao_social' => $request->razao_social,
-                  'cnpj' => $request->cnpj,
+                  'cnpj' => $cnpj,
                 ]);
 
                 return response()->json([
@@ -79,6 +90,5 @@ class ClienteController extends Controller
             }
         }
     }
-
 
 }
