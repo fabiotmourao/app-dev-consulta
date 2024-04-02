@@ -4,10 +4,11 @@
 Este é um projeto Laravel para consulta. Este README fornecerá instruções sobre como configurar e executar o projeto localmente.
 
 
-## Pré requisitos
+## Pré requisitos para projeto
 
 - Git
 - Docker
+- npm
 
 ## Clonando o Repositório
 
