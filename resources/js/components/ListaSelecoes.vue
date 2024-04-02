@@ -6,8 +6,7 @@
       <thead class="bg-gray-50">
         <tr>
           <th scope="col" class="px-3 py-4 font-medium text-gray-900">Nome seleção</th>
-          <th scope="col" class="px-3 py-4 font-medium text-gray-900">Cliente Nome</th>
-           <th scope="col" class="px-3 py-4 font-medium text-gray-900">Cliente Razão Social</th>
+           <th scope="col" class="px-3 py-4 font-medium text-gray-900">Razão Social Cliente </th>
           <th scope="col" class="px-3 py-4 font-medium text-gray-900">Nome Candidato</th>
           <th scope="col" class="px-3 py-4 font-medium text-gray-900">CPF</th>
           <th scope="col" class="px-3 py-4 font-medium text-gray-900">Data Ocorrido</th>
@@ -22,7 +21,6 @@
                 </td>
               </div>
             </th>
-            <td class="px-3 py-2">{{ selecao.cliente.nome }}</td>
             <td class="px-3 py-2">{{ selecao.cliente.razao_social }}</td>
             <td class="px-3 py-2">{{ selecao.candidato.nome }}</td>
             <td class="px-3 py-2">{{ selecao.candidato.cpf }}</td>

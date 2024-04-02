@@ -10,7 +10,7 @@ class Cliente extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable = ['nome', 'razao_social', 'cnpj'];
+    protected $fillable = ['razao_social', 'cnpj'];
 
     public function selecoes()
     {

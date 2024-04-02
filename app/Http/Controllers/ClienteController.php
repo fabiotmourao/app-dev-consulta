@@ -79,7 +79,7 @@ class ClienteController extends Controller
 
                 return response()->json([
                     'status' => 200,
-                    'message' => 'Clente atualizado com sucesso!',
+                    'message' => 'Cliente atualizado com sucesso!',
                 ], 200);
 
             }else{

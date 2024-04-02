@@ -30,7 +30,6 @@ class ClienteFactory extends Factory
         $razaoSocial = rtrim($this->faker->company, ',') . ' ' . $tipos[rand(0, count($tipos) - 1)];
 
         return [
-            'nome' => explode(' ', $razaoSocial)[0],
             'razao_social' => $razaoSocial,
             'cnpj' => str_pad(mt_rand(0, 999999999), 14, '0', STR_PAD_LEFT),
         ];
