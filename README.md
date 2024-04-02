@@ -17,7 +17,7 @@ Este é um projeto Laravel para consulta. Este README fornecerá instruções so
 
 ## Configuração do Ambiente
 
-        Renomeie o arquivo .env.example para .env
+           Renomeie o arquivo .env.example para .env
 
 - Instale as dependências PHP com Composer
 
