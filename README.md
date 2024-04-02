@@ -37,6 +37,8 @@ npm install
 
     docker compose -f "docker-compose.yml" up -d --build
 
+    ./vendor/bin/sail up -d
+
     ou
     
     Se preferir, inicie pelo ambiente visual do Docker.
@@ -60,3 +62,8 @@ npm run dev
     Se preferir recriar o banco de dados
 
     vendor/bin/sail artisan migrate:refresh --seed
+
+ 
+## Por conveniência, criar um pseudónimo para Sail para facilitar o trabalho com o Sail:
+
+alias sail="bash ./vendor/bin/sail"
