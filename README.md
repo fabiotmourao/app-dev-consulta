@@ -35,15 +35,15 @@ Este é um projeto Laravel para consulta. Este README fornecerá instruções so
 
 ## Executando o Projeto
 
-- Inicie os contêineres Docker usando Docker Compose
-
-    - duas formas de subir
-  
-        docker compose -f "docker-compose.yml" up -d --build
-
-        ou
-    
-        ./vendor/bin/sail up -d
+        - Inicie os contêineres Docker usando Docker Compose
+        
+            - duas formas de subir
+          
+                docker compose -f "docker-compose.yml" up -d --build
+        
+                ou
+            
+                ./vendor/bin/sail up -d
 
 ## Compile os assets JavaScript
 
