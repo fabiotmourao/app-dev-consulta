@@ -36,13 +36,13 @@ Renomeie o arquivo .env.example para .env
 
 - Inicie os contêineres Docker usando Docker Compose
 
+    - duas formas de subir
+  
         docker compose -f "docker-compose.yml" up -d --build
 
+        ou
+    
         ./vendor/bin/sail up -d
-
-  ou
-  
-  Se preferir, inicie pelo ambiente visual do Docker.
 
 ## Compile os assets JavaScript
 
