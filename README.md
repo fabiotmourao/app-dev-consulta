@@ -35,13 +35,13 @@ npm install
 
 - Inicie os contêineres Docker usando Docker Compose
 
-    docker compose -f "docker-compose.yml" up -d --build
+  docker compose -f "docker-compose.yml" up -d --build
 
-    ./vendor/bin/sail up -d
+  ./vendor/bin/sail up -d
 
-    ou
-    
-    Se preferir, inicie pelo ambiente visual do Docker.
+  ou
+  
+  Se preferir, inicie pelo ambiente visual do Docker.
 
 ## Compile os assets JavaScript
 
@@ -51,19 +51,17 @@ npm run dev
 
 - Execute as migrações do banco de dados:
 
-    vendor/bin/sail artisan migrate
+  vendor/bin/sail artisan migrate
 
 - Execute a seed para semear o banco de dados:
 
-    vendor/bin/sail artisan db:seed
+  vendor/bin/sail artisan db:seed
 
-    ou 
-    
-    Se preferir recriar o banco de dados
+  ou 
+  
+  Se preferir recriar o banco de dados
 
-    vendor/bin/sail artisan migrate:refresh --seed
+  vendor/bin/sail artisan migrate:refresh --seed
 
- 
-## Por conveniência, criar um pseudónimo para Sail para facilitar o trabalho com o Sail:
-
-alias sail="bash ./vendor/bin/sail"
+ ## Caso queira criar um pseudónimo para Sail para facilitar o trabalho com o Sail
+- alias sail="bash ./vendor/bin/sail"
