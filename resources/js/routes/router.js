@@ -31,6 +31,11 @@ export const routes = [
         path: '/selecao',
         name: 'Selecao',
         component: () => import('../components/ListaSelecoes.vue'),
+    },
+    {
+        path: '/selecao/create',
+        name: 'SelecaoCreate',
+        component: () => import('../components/CriarSelecao.vue'),
     }
 ];
 

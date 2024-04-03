@@ -100,7 +100,7 @@ export default {
           this.clearInputErrors();
         })
         .catch((error) => {
-          if (error.response.status === 422) {
+          if (error.response.data.status === 422) {
             const errors = error.response.data.errors;
             if (errors.hasOwnProperty('nome')) {
               this.candidato.erro_nome = errors.nome[0];

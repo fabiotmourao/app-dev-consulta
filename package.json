@@ -19,8 +19,10 @@
         "vue": "^3.2.37"
     },
     "dependencies": {
+        "@vueform/multiselect": "^2.6.7",
         "v-mask": "^2.3.0",
         "vue-axios": "^3.5.2",
+        "vue-multiselect": "^2.1.9",
         "vue-router": "^4.3.0",
         "vue-the-mask": "^0.11.1"
     }

@@ -14,6 +14,8 @@ Route::middleware('api')->group(function () {
     Route::post('/candidato/{id}/update', [App\Http\Controllers\CandidatoController::class, 'update']);
 
     Route::get('/selecao', [App\Http\Controllers\SelecaoController::class, 'index']);
+    Route::post('/selecao/create', [App\Http\Controllers\SelecaoController::class, 'create']);
+
 });
 
 

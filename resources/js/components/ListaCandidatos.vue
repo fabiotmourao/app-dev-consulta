@@ -9,9 +9,7 @@
         <tr>
           <th scope="col" class="px-3 py-4 font-medium text-gray-900">Nome</th>
           <th scope="col" class="px-3 py-4 font-medium text-gray-900">CPF</th>
-          <th scope="col" class="px-3 py-4 font-medium text-gray-900">
-            Logradouro
-          </th>
+          <th scope="col" class="px-3 py-4 font-medium text-gray-900">Logradouro</th>
           <th scope="col" class="px-3 py-4 font-medium text-gray-900">Ações</th>
         </tr>
       </thead>
