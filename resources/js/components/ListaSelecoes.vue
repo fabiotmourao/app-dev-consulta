@@ -1,16 +1,15 @@
 <template>
   <div>
     <div class="flex justify-between items-center">
-      <!-- <h2 class="text-2xl py-5 font-normal font-sans">Editar Cliente</h2> -->
       <h2 class="text-start text-2xl py-5 font-normal font-sans">
         Area de Seleção
       </h2>
       <router-link
         :to="{ path: '/selecao/create' }"
-        class="text-gray-400 hover:bg-gray-100 rounded-lg text-sm w-10 h-10 mr-9"
-      >
+        class="py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-gray-700  focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
         Criar Seleção
       </router-link>
+
     </div>
     <div
       class="min-h-full overflow-hidden rounded-lg border-gray-200 shadow-md"

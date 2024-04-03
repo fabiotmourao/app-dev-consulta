@@ -1,7 +1,6 @@
 <template>
   <div class="flex justify-between items-center">
     <h2 class="text-2xl py-5 font-normal font-sans">Criar Seleção</h2>
-    <p>criação de seleção com o cliente e o candidato</p>
     <router-link
       :to="{ path: '/selecao' }"
       class="text-gray-400 hover:bg-gray-100 rounded-lg text-sm w-10 h-10 mr-9"
